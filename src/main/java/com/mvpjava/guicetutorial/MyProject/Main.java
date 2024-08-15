@@ -10,6 +10,6 @@ public class Main {
         D dInstance2 = injector.getInstance(D.class);
 
         // Both should refer to the same instance of C
-        System.out.println(dInstance1.c.a.b.num);
+        System.out.println(dInstance1.c.a.equals(dInstance2.c.a));
     }
 }

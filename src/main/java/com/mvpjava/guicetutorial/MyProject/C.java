@@ -5,8 +5,17 @@ public class C {
     public final A a;
 
     @Inject
-    public C(A a) {
-        this.a = a;
+    public C(E e) {
+        this.a = getA(e);
+    }
+    
+    public A getA(E e)
+    {
+        B b = new B();
+        b.num = e.Enumber;
+        A a = new A();
+        a.b = b; 
+        return a;
     }
 
     // Additional methods here
